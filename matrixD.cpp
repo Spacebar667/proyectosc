@@ -9,8 +9,8 @@ int main() {
     int c[4];
     int y[4];
     int z[4];
-    int n[4];
-    int m[4];
+    int n[4] = {0};
+    int m[4] = {0};
     int i, j;
 
     for (i = 0; i < 4; i++) {
@@ -54,6 +54,21 @@ int main() {
         z[j] = w[j][3];
     }
 
+    
+    for (i = 0; i < 4; i++) {
+        for (j = 0; j < 4; j++) {
+            cout << h[i][j] << " ";
+            if (h[i][j] % 2 == 0){
+                n[j] = h[i][j];
+            }
+            else {
+                m[j] = h[i][j];
+            }
+        }
+        cout << endl;
+    }
+
+    
     cout << "Primera Matriz que ingreso: " << endl;
 
     for (i = 0; i < 4; i++) {
@@ -67,6 +82,14 @@ int main() {
     for (i = 0; i < 4; i++) {
         for (j = 0; j < 4; j++) {
             cout << w[i][j] << "  ";
+        }
+        cout << " \n ";
+    }
+
+    cout << "Tercera Matriz que ingreso: " << endl;
+    for (i = 0; i < 4; i++) {
+        for (j = 0; j < 4; j++) {
+            cout << h[i][j] << "  ";
         }
         cout << " \n ";
     }
@@ -108,4 +131,3 @@ int main() {
 
     return 0;
 }
-
