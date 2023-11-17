@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int main (){
+    int a[4][4],b[4],i,j;
+    
+    for(j=0;j<4;j++){
+        for (i=0;i<4;i++){
+            cout << "Digite un valor: ";
+            cin >> a[i][j];
+        }
+    }
+    for(j=0;j<4;j++){
+        for (i=0;i<4;i++){
+            if (i == 2)
+                b[j] = a [i][j];
+        }
+    }
+    
+    for(j=0;j<4;j++){
+        for (i=0;i<4;i++)
+            cout << a[i][j] << "  ";
+    	cout <<"\n";
+    }
+    cout << "\n";
+    
+    for (j=0;j<4;j++)
+    cout << b[j]<< "  ";
+    
+    
+}
